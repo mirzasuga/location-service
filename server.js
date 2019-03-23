@@ -69,7 +69,8 @@ courierLocationUpdated = (data) => {
     wss.clients.forEach(client => {
         const message = {
             channel: 'courier-location',
-            event: 'courierLocationUpdated',
+            event: 'update',
+            handler: 'courierLocationUpdated',
             message: data
         };
         client.send(JSON.stringify(message));
