@@ -1,6 +1,6 @@
 const WebSocket = require('ws');
-const port = process.env.LOCATION_SERVICE_PORT || 3001;
-const host = process.env.LOCATION_SERVICE_HOST || '127.0.0.4';
+const port = process.env.PORT || 5000;
+// const host = process.env.HOST || '127.0.0.4';
 const url = require('url');
 const jwt = require('jsonwebtoken');
 const secret = process.env.CLIENT_SECRET || 'uNnnkDGbuxSlsGiBjzfQLuWIhWOKBwl0P06qnOJI';
@@ -30,8 +30,8 @@ const authenticate = (info, done) => {
 
 const wss = new WebSocket.Server({
     port: port,
-    host: host,
-    verifyClient: authenticate
+    // host: host,
+    // verifyClient: authenticate
 });
 
 
