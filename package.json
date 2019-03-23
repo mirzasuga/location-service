@@ -1,0 +1,16 @@
+{
+  "name": "location-service",
+  "version": "1.0.0",
+  "description": "Sipmen Location Service using ws express and redis",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mirza",
+  "license": "ISC",
+  "dependencies": {
+    "jsonwebtoken": "^8.5.1",
+    "ws": "^6.2.0"
+  }
+}
